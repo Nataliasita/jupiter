@@ -1,0 +1,461 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+}
+.bigContainer{
+  width:100vw;
+  height:100vh;
+}
+.home1{
+    height: 100px;
+    width: 100px;
+    margin-left: 100px;
+    background-color: blue;
+    position: absolute;
+    background-color:#e4c20050;
+  
+}
+
+/*-------------- css tarjetas */
+
+
+#root{
+    display: flex;
+    width:100%;
+    height: 100vh;
+    background: #7B4301;
+    position: absolute;
+}
+
+
+/*** AQUI COMIENZA LAS INSTRUCCIONES DE LAS TARJETAS ****/
+#sidebar{
+    width:27vw;
+    background: #696969;
+    background: linear-gradient(#696969, #ececec);
+    position: absolute;
+    top:0;
+    height: 100vh;
+    color: #FFFFFF;
+}
+
+.containerTab{
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap;
+    justify-content: space-evenly; */
+    padding: 3%;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.containerDescription{
+    border-radius: 5%;
+    border: 2px solid black;
+    position: absolute;
+    top:33vh;
+    padding: 0 1vw 0 0vw;
+    width: 23vw;
+    height: 65vh;
+    background-color: #00052B;
+}
+
+.playerContainer{
+    width: 50%;
+    height: auto;
+    
+}
+
+#playerAvatar {
+    height: 25vh;
+    border-radius: 1000px; 
+    position: absolute;
+    top:2vh;
+    left: 9vw;
+}
+#playerName{
+    position: absolute;
+    top:25.5vh;
+    left: 9vw;
+    width: 11vw;
+    text-align: center;
+
+}
+/* @supports(object-fit: cover){
+    #playerAvatar img{
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 1000px; 
+    }
+} */
+.titleE{
+    margin:0;
+    padding: 1.5vh 0 2vh 1vw;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+.cardOptions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 2vh;
+}
+
+.cardOptions p{
+    width: 100px;
+    color: #FFFFFF;
+
+}
+.jupiterElements{
+    margin: 0;
+    padding: 0.5vh 0 0.5vh 0;
+    
+}
+.containerHits{
+    position: absolute;
+    top:49vh;
+    left: 5.5vw;
+    
+}
+.timeContainer{
+    position: absolute;
+    top:54vh;
+    left: 5.5vw;
+    width: 11vw;
+    border: 2px solid #FFFFFF;
+    padding-left: 0.5vw;
+}
+#btnplay{
+    position: absolute;
+    bottom:7vh;
+    left: 40vw;
+    height: 12vh;
+    width: 18vw;
+    cursor: pointer;
+    background: #864000;
+    color: #FFFFFF;
+    font-family: 'Orbitron', sans-serif;
+    font-size:1.5em;
+    border-radius: 70px;
+    border-width:4px;
+}
+#btnplay:hover{
+    background: #693300;
+    bottom: 8vh;
+}
+/*** AQUI COMIENZA LAS TARJETAS ****/
+#game{
+    width: 71vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    position: absolute;
+    top:1.45vh;
+    left: 28vw;
+}
+
+.card-wrapper{
+    margin: 0.3em;
+    background-color: transparent;
+    width: 10.2vw;
+    height: 22.5vh;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border-radius: 5px;
+}
+#fnd_card{
+    border-radius: 5px;
+    opacity: 0.6;
+    background-size: 100% 100%;
+    transform: rotate(23deg);
+    cursor: pointer;
+}
+#fnd_card:hover{
+    border:#964026 3px solid;
+    transform: rotate(0deg);
+    opacity: 1;
+    box-shadow: #492604 0px 5px 15px;
+    box-shadow: #9640268a  0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    
+}
+  
+.face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+.front{
+    background-color: rgb(255, 245, 227);
+    color: black;
+    text-align: center; 
+}
+  
+.back {
+    text-align: center; 
+    background-color: #305c14;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.back img{
+    width: 100%;
+    height: auto;
+}
+
+ @supports(object-fit: cover){
+    .back img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+  
+.avatar{
+    width: 100%;
+    height: 100%;
+}
+
+.avatar img{
+    width: 100%;
+    height: 100%;
+}
+#myModal1{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0vw;
+    z-index: 2;
+    background-color: rgba(70, 70, 70, 0.671);
+    backdrop-filter: blur(2px);
+    padding: 0.6em;
+
+}
+#image_p{
+    position:absolute ;
+    left: 20vw;
+    top: 33vh;
+    height: 36vh;
+}
+#tex2{
+    position:absolute ;
+    left: 40vw;
+    top: 43vh;
+    height: 36vh;
+    font-size: 1.5em;
+}
+#myModal3{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0vw;
+    z-index: 2;
+    background-color: rgba(51, 51, 51, 0.774);
+    padding: 0.6em;
+}
+#piezas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 41vw;
+    height: 60vh;
+    margin: auto;
+    justify-content: center;
+    position: absolute;
+    right: 10vw;
+    top: 36.5vh;
+    background-color: #663100;
+    cursor:pointer;
+    border-radius: 10px;
+}
+
+#puzzle {
+    border: 2px solid #301700;
+    width: 43vw;
+    height: 93vh;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3.5vh 0 0 2vw;
+    padding: 0 0 0 0.5vw;
+    background-color: #663100;
+    border-radius: 5px;
+}
+.container{
+    background-color: #bbbbbb;
+}
+.pieza {
+    max-width: 7vw;
+    max-height: 23vh;
+    min-width: 6vw;
+    min-height: 8vh;
+    width: auto;
+    height: auto;
+    margin: 0.3em;
+    background-size: 100% 100%;
+    
+}
+
+.placeholder {
+    background-color: #fff1d2;
+    outline: 1px solid #333;
+    width: 7vw;
+    height: 23vh;
+    transition: 1s;
+}
+
+.placeholder.hover {
+    background-color: orange;
+}
+
+.placeholder .pieza {
+    margin: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#mensaje {
+    color: black;
+    text-align: center;
+    display: none;
+}
+
+.ganaste {
+    background-color: #B3D67C;
+}
+
+.ganaste #mensaje {
+    display: block;
+}
+
+.ganaste .placeholder {
+    outline: none;
+}
+
+.ganaste #piezas {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+ .planet1{
+    height: 25vh;
+    top: 4vh;
+    right: 37.2vw;
+    height: 28vh;
+    position: absolute;
+    border-radius: 15px;
+} 
+.gamer_puzzle{
+    width: 35vw;
+    height: 20vh;
+    top: 4vh;
+    right: 0;
+    height: 28vh;
+    display: flex;
+    position: absolute;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 200px;
+    background: linear-gradient(#636363, #ebf8e1, #757575);
+    color:#ffffff;
+    font-family: 'Orbitron', sans-serif;
+}
+.btn_return{
+    width: 5vw;
+    bottom: 6vh;
+    right: 1.5vw;
+    height: 11vh;
+    border-radius: 1000px;
+    background-image: url('images/flecha.png');
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-color: #00052B;
+    border:0;
+    position: absolute;
+  
+}
+.btn_return:hover{
+    background-image: url('images/flecha2.png');
+    background-color: #010b58;
+    cursor: pointer;
+    transform: rotate(-23deg);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+#gamer{
+    position: absolute;
+    right: 1.6vw;
+    width: 11vw;
+    bottom: 0.5vh;
+    text-align: center;
+}
+#gamer_img{
+    position: absolute;
+    height: 18vh;
+    right: 3vw;
+    top:2vh;
+}
+.descripcion_puzz{
+    width: 15vw;
+    height: 16vh;
+    position: absolute;
+    left: 6.3vw;
+    top:2.5vh;
+    padding-top: 1.5vh;
+    text-align: center;
+    background-color: #50505025;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+.btn_return2{
+    width: 5vw;
+    top: 10vh;
+    left: 1.5vw;
+    height: 11vh;
+    border-radius: 1000px;
+    background-image: url('images/flecha.png');
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-color: #00052B;
+    border:0;
+    position: absolute;
+    transform: rotate(180deg);
+  
+}
+.btn_return2:hover{
+    background-image: url('images/flecha2.png');
+    background-color: #010b58;
+    cursor: pointer;
+    transform: rotate(200deg);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
