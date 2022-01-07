@@ -80,13 +80,22 @@ export function modal_return(){
         font-family: 'Orbitron', sans-serif;
     }
     #btn_modal_2:hover{
-        background-color: #e6bb00;
+        background-color: #E4C000;
         cursor:pointer;
     }
-    
+    #met{
+        height:17vh;
+        position:absolute;
+        top:20vh;
+        margin-left:15vw;
+        transform:rotate(-25deg);
+        z-index:50;
+    }
+
     </style>
 
     <div class="modal_puzz" style="display:none;">
+                <img id="met" src="images/meteoro.png" alt="">
             <div class="mesagge">
                 <h2 class="title-modal"> Atencion astronauta !!!!!!!!</h2>
                     <p class="description_modal">Recuerda que si te vas en este momento no podras recuperar el avance <br><br>¿ Estas seguro de abandonar la mision ?</p>

@@ -29,20 +29,36 @@ export function homeAmbientes() {
         left:45vw
     }
     .bienvenida{
-        position:absolute;
         top:1.5vh;
         left:20vw;
-
+        margin-right:0.7vw;
+        margin-top:0;
+    }
+    .contain_welcome{
+        width: 40vw;
+        height: 10vh;
+        display:flex;
+        padding-top: 2vh; 
+        position:absolute;
+        justify-content:center;
+        top:2vh;
+        border: 5px dotted #E4C000 ;
+        background-color:#e4c20050;
+        z-index:10;
+        flex-direction:row;
+        margin-left:30vw;
+        backdrop-filter: blur(1px);
+        clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
     }
     #name_per{
-        position:absolute;
+        margin:0;
         top:1.5vh;
         left:30.5vw;
     }
     #title_mision{
         position:absolute;
         top:10vh;
-        left:35vw;
+        left:34.3vw;
         font-size:1.6em;
         font-weight: 700;
     }
@@ -99,7 +115,7 @@ export function homeAmbientes() {
         background-image: url('./images/imgeuropa.png');
         background-repeat: no-repeat;
         background-size: 100% 120%;
-        top:30vh;
+        top:31vh;
         left:39vw;
         display:flex;
         border-radius:10px;
@@ -121,7 +137,7 @@ export function homeAmbientes() {
     .ambiente_recorrido:hover{
         width: 24vw;
         height: 33vh;
-        top:28.5vh;
+        top:29.5vh;
         cursor: pointer;
         box-shadow: rgba(240, 211, 46, 0.4) -5px 5px, rgba(240, 221, 46, 0.3) -10px 10px, rgba(240, 227, 46, 0.2) -15px 15px, rgba(240, 221, 46, 0.1) -20px 20px, rgba(240, 221, 46, 0.05) -25px 25px;
     }
@@ -192,8 +208,9 @@ export function homeAmbientes() {
 
 
 <div class="home_am">
-
-        <p class="bienvenida">Bienvenido</p><p id="name_per"></p>
+        <div class="contain_welcome">
+              <p class="bienvenida">Bienvenido</p><p id="name_per"></p>
+        </div>
         <img id="image_astro" src="" alt="">
             <p id="title_mision">Selecciona una mision</p>
 
