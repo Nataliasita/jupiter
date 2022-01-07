@@ -15,7 +15,7 @@ const data = [
   
     { "id": 8, "name": "temperaturas extremas", "url": "../memorygame/assets/images1/temperaturas.jpg" },
   
-    { "id": 9, "name": "hidrógeno molecular", "url": "../memorygame/assets/images1/hidrogenoMolecular.jpg" },
+    { "id": 9, "name": "hidrógeno molecular", "url": "../memorygame/assets/images1/hidrogenomolecular.jpg" },
   
     { "id": 10, "name": "dióxido de carbono", "url": "../memorygame/assets/images1/dioxidodecarbono.jpg" },
   
