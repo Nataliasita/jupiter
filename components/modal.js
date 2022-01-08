@@ -86,9 +86,9 @@ export function modal_return(){
     #met{
         height:17vh;
         position:absolute;
-        top:20vh;
-        margin-left:15vw;
-        transform:rotate(-25deg);
+        top:23vh;
+        left:22vw;
+        transform:rotate(232deg);
         z-index:50;
     }
 
