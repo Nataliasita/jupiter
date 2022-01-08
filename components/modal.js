@@ -88,7 +88,7 @@ export function modal_return(){
         position:absolute;
         top:23vh;
         left:22vw;
-        transform:rotate(232deg);
+        transform:rotate(225deg);
         z-index:50;
     }
 
